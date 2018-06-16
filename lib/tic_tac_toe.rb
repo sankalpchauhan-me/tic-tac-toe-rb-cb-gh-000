@@ -26,7 +26,7 @@ def input_to_index(str)
 end
 
 #Moves a player
-def move(board, index, value="X")
+def move(board, index, value)
   board[index] = value
 end
 
@@ -55,7 +55,7 @@ def turn(board)
   index  = input_to_index(val)
 
   if(valid_move?(board,index)==true)
-    move(board, index, value="X")
+    move(board, index, value)
     display_board(board)
   elsif(valid_move?(board,index)==false)
     turn(board)
