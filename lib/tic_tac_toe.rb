@@ -1,3 +1,7 @@
+#Created by Sankalp Chauhan (@sankalpchauhan-me) for The Web Developer Bootcamp of The Flatrion School
+#Thanks to the team of Flatrion School
+
+
 # WIN_COMBINATIONS constant
 WIN_COMBINATIONS = [
   [0,1,2],
@@ -138,3 +142,21 @@ def winner(board)
     return nil
   end
 end
+
+#The play method is the main method of the tic tac toe application and is responsible for the game loop.
+def play(board)
+  until (over?(board) == true)
+    turn(board)
+  end
+
+  if (winner(board) == "X")
+    puts "Congratulations X!"
+  elsif (winner(board) == "Y")
+    puts "Congratulations Y!"
+  elsif(draw?(board) == true)
+    puts "Cats game!"
+  end
+end
+    
+    
+  
